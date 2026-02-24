@@ -1,65 +1,44 @@
 # BMO-Wakeup-
+<p align="center">
+  <img src="bmo_face.png" alt="BMO Face" width="400">
+</p>
 
-To create a professional GitHub README for your BMO project, we will use Markdown to structure the information and include the path to your BMO image. Since you are a student at Daffodil International University, this is a great addition to your portfolio.
+<h1 align="center">🤖 BMO: The Interactive Robot</h1>
 
-Here is a template you can copy and paste into a file named README.md in your project folder.
+<p align="center">
+  <img src="https://img.shields.io/badge/OS-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu Badge">
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge">
+  <img src="https://img.shields.io/badge/Wake_Word-BMO-77cfb7?style=for-the-badge" alt="BMO Badge">
+</p>
 
-BMO Interactive Robot 🤖
-BMO is a Python-based interactive robot project designed to run on Ubuntu Linux. It features a voice-activated interface that triggers eye animations and sound responses.
+---
 
-📸 Face Preview
-When BMO hears the wake word "Hey BMO", its eyes transition from a sleeping state to an open, alert state.
+### 📝 Overview
+BMO is an interactive, voice-activated robot project developed on **Ubuntu Linux**. Designed with a focus on human-robot interaction, BMO uses real-time speech recognition to trigger facial animations and native audio feedback.
 
-(Note: Ensure you have an image named bmo_face.png in your repository for this to display.)
+[Image of a flowchart showing voice input being captured, processed by SpeechRecognition, and triggering a UI change in Tkinter]
 
-✨ Features
-Voice Recognition: Uses the SpeechRecognition library with Google Speech API to detect "Hey BMO".
+### ✨ Key Features
+* **Voice Trigger**: Responds to "Hey BMO" using Google Speech Recognition API.
+* **Alive Mode**: Random blinking patterns ensure BMO looks conscious while idling.
+* **Ubuntu Optimized**: Uses native `aplay` to bypass common Linux audio driver conflicts.
+* **Fluid Animation**: Vertically expanding eyes built with Python's Tkinter.
 
-Dynamic GUI: A Tkinter-based fullscreen interface representing BMO’s face.
+---
 
-Random Blinking: BMO blinks at random intervals to appear more "alive" while waiting for commands.
+### 🛠️ Tech Stack
+| Component | Technology |
+| :--- | :--- |
+| **Language** | Python 3.12 |
+| **GUI** | Tkinter |
+| **Audio Playback** | ALSA / `aplay` |
+| **Speech Engine** | `SpeechRecognition` |
 
-Audio Response: Plays a greeting sound (hey.wav) using native Ubuntu aplay to avoid driver conflicts.
+---
 
-Linux Optimized: Specifically configured to bypass common ALSA and Jack server audio issues on Ubuntu.
+### 🚀 Getting Started
 
-🛠️ Requirements
-Operating System: Ubuntu (tested on 22.04+).
-
-Environment: Python 3.12 within a virtual environment (bmo_env).
-
-System Libraries:
-
-python3-tk
-
-portaudio19-dev
-
-libsdl2-mixer-2.0-0
-
-alsa-utils (for aplay)
-
-🚀 Installation & Setup
-Clone the repository:
-
-Bash
-git clone https://github.com/your-username/bmo-robot.git
-cd bmo-robot
-Set up the Virtual Environment:
-
-Bash
-python3 -m venv bmo_env
-source bmo_env/bin/activate
-pip install SpeechRecognition PyAudio
-Configure Audio Permissions:
-To allow the script to access your hardware, add your user to the audio group and restart your session:
-
-Bash
-sudo usermod -a -G audio $USER
-Run BMO:
-
-Bash
-python3 test_bmo.py
-⌨️ Controls
-Wake Word: "Hey BMO".
-
-Exit: Press Esc to close the fullscreen interface.
+1. **Prerequisites**:
+   Ensure you have installed the necessary system dependencies on your Ubuntu machine:
+   ```bash
+   sudo apt-get install python3-tk portaudio19-dev alsa-utils
